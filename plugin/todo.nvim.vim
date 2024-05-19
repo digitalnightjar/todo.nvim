@@ -12,7 +12,7 @@ endif
 
 let g:loaded_todo_nvim = 1
 
-let s:lua_rocks_deps_loc = expand("<sfile>:h:r") . "../lua/todo-nvim/deps"
+let s:lua_rocks_deps_loc = expand("<sfile>:h:r") . "../lua/todo.nvim/deps"
 
 " Defines a package path for Lua. This facilitates importing the
 " Lua modules from the plugin's dependency directory.
