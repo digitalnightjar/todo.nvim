@@ -20,7 +20,7 @@ function M.complete_todo()
 	local todo_completed = -1
 	local todo_selected = -1
 	repeat
-		local db_results = db:exec("SELECT * FROM todo_list WHER completed == 'No';")
+		local db_results = db:exec("SELECT * FROM todo_list WHERE completed == 'No';")
 		for i, item in ipairs(db_results[2]) do
 			print(tostring(db_results[1][i]) .. '; ' .. item)
 		end
@@ -33,7 +33,7 @@ function M.complete_todo()
 		print("")
 	until todo_completed >= 0
 
-	db:exec("UPDATE todo_list SET completed = 'Yes' EHERE id = " .. todo_completed .. " AND completed = 'No';")
+	db:exec("UPDATE todo_list SET completed = 'Yes' WHERE id = " .. todo_completed .. " AND completed = 'No';")
 	db:close()
 end
 
