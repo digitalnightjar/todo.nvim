@@ -19,6 +19,6 @@ let s:lua_rocks_deps_loc = expand("<sfile>:h:r") . "/../lua/todo.nvim/deps"
 exe "lua package.path = package.path .. ';" . s:lua_rocks_deps_loc . "/lua-?/init.lua'"
 
 " Exposes the plugin's functions for use as commands in Neovim.
-command! -nargs=0 FetchTodos lua require("tood.nvim").fetch_todos()
+command! -nargs=0 FetchTodos lua require("todo.nvim").fetch_todos()
 command! -nargs=0 InsertTodo lua require("todo.nvim").insert_todo()
 command! -nargs=0 CompleteTodo lua require("todo.nvim").complete_todo()
