@@ -5,11 +5,11 @@ end
 
 vim.g.loaded_todo_plugin = 1
 
-package.path = './deps' .. package.path
-package.path = './deps/lsqlite3/;' .. package.path
-package.path = './deps/xsys/;' .. package.path
-package.path = './deps/lsqlite3/?.lua;' .. package.path
-package.path = './deps/xsys/?.lua;' .. package.path
+package.path = './deps/' .. package.path
+-- package.path = './deps/lsqlite3/;' .. package.path
+-- package.path = './deps/xsys/;' .. package.path
+-- package.path = './deps/lsqlite3/?.lua;' .. package.path
+-- package.path = './deps/xsys/?.lua;' .. package.path
 
 local fetch = require("todo.fetch")
 local update = require("todo.update")
