@@ -9,7 +9,7 @@ vim.g.loaded_todo_plugin = 1
 --exe "lua package.path = package.path .. ';" . s:lua_rocks_deps_loc . "/lua-?/init.lua'
 
 -- package.path = './deps/' .. package.path
-dependeciesPath = './deps'
+dependenciesPath = './deps'
 package.path = package.path .. '; ' .. dependenciesPath
 -- package.path = './deps/lsqlite3/;' .. package.path
 -- package.path = './deps/xsys/;' .. package.path
