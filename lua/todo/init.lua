@@ -5,7 +5,8 @@ end
 
 vim.g.loaded_todo_plugin = 1
 
-package.path = './deps/' .. package.path
+-- package.path = './deps/' .. package.path
+package.patth = './deps/*/init.lua' .. package.path
 -- package.path = './deps/lsqlite3/;' .. package.path
 -- package.path = './deps/xsys/;' .. package.path
 -- package.path = './deps/lsqlite3/?.lua;' .. package.path
