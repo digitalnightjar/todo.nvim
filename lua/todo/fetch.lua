@@ -1,5 +1,5 @@
 local oldreq = require
-local require = function(s) return oldreq('todo.deps' .. s) end
+local require = function(s) return oldreq('todo.deps.' .. s) end
 -- Imports the module for handling SQLite.
 local sqlite = require("ljsqlite3")
 
