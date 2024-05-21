@@ -1,5 +1,5 @@
 -- Imports the module for handling SQLite.
-local sqlite = require("deps.ljsqlite3")
+local sqlite = require("todo.deps.ljsqlite3")
 
 -- Creates an object for the module.
 local M = {}
