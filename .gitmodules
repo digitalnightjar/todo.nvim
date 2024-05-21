@@ -1,6 +1,0 @@
-[submodule "lua/example-plugin/deps/lua-lsqslite3"]
-	path = lua/example-plugin/deps/lua-lsqslite3
-	url = https://github.com/stepelu/lua-ljsqlite3.git
-[submodule "lua/example-plugin/deps/lua-xsys"]
-	path = lua/example-plugin/deps/lua-xsys
-	url = https://github.com/stepelu/lua-xsys.git
