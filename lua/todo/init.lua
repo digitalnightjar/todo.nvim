@@ -5,14 +5,8 @@ end
 
 vim.g.loaded_todo_plugin = 1
 
--- import the plugins additional lua modules
--- local oldreq = require
--- local require = function(s) return oldreq('todo.deps' .. s) end
-
 local fetch = require("todo.fetch")
 local update = require("todo.update")
---- Restore old requires
--- require = oldreq
 
 -- Creates an object for the module. All of the module's
 -- functions are associated with this object, which is
