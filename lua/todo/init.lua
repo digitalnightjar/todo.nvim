@@ -1,5 +1,5 @@
 -- Prevent the plugin being loaded more than once
-if (vim.g.loaded_todo_plugin ~= nil)
+if (vim.g.loaded_todo_plugin ~= nil) then
 	return
 end
 
