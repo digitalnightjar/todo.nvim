@@ -16,4 +16,3 @@ function M.fetch_todos()
 end
 
 return M
-    
