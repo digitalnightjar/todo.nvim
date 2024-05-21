@@ -5,13 +5,18 @@ end
 
 vim.g.loaded_todo_plugin = 1
 
+--let s:lua_rocks_deps_loc =  expand("<sfile>:h:r") . "/../lua/example-plugin/deps"
+--exe "lua package.path = package.path .. ';" . s:lua_rocks_deps_loc . "/lua-?/init.lua'
+
 -- package.path = './deps/' .. package.path
-package.path = './deps/*/init.lua' .. package.path
+dependeciesPath = './deps'
+package.path = package.path .. '; ' .. dependenciesPath
 -- package.path = './deps/lsqlite3/;' .. package.path
 -- package.path = './deps/xsys/;' .. package.path
 -- package.path = './deps/lsqlite3/?.lua;' .. package.path
 -- package.path = './deps/xsys/?.lua;' .. package.path
-
+require('todo.deps.ljsqlite3')
+require('todo.deps.xsys')
 local fetch = require("todo.fetch")
 local update = require("todo.update")
 
