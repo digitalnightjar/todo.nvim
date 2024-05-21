@@ -15,8 +15,8 @@ package.path = package.path .. '; ' .. dependenciesPath
 -- package.path = './deps/xsys/;' .. package.path
 -- package.path = './deps/lsqlite3/?.lua;' .. package.path
 -- package.path = './deps/xsys/?.lua;' .. package.path
-require('todo.deps.ljsqlite3')
 require('todo.deps.xsys')
+require('todo.deps.ljsqlite3')
 local fetch = require("todo.fetch")
 local update = require("todo.update")
 
