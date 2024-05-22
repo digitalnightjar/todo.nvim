@@ -53,6 +53,8 @@ local function list_results_popup(win_title, list_items)
         "Normal:TodosBorder"
     )
 
+        vim.api.nvim_buf_set_lines(bufnr, 0, #db_results[2], false, db_results[2])
+
     return {
         bufnr = bufnr,
         win_id = todo_win_id,
@@ -62,15 +64,10 @@ end
 -- Fetches todo tasks from the database and
 -- prints the output.
 function M.fetch_todos()
-	vim.api.nvim_echo({{"Fetching all incompleted todos"}}, false, {})
     	local db = sqlite.open("todo.db")
     	local db_results = db:exec("SELECT * FROM todo_list WHERE completed == 'No';")
-    	for _, item in ipairs(db_results[2]) do print(item) end
     	db:close()
-	    vim.api.nvim_buf_set_lines(bufnr, 0, #db_results[2], false, db_results[2])
 	list_results_popup("Pending Todo Items", db_results);
-
-    	-- create_todolist_window()
 end
 
 function M.fetch_completed()
