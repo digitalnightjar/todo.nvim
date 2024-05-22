@@ -42,7 +42,8 @@ local function list_results_popup(win_title, list_items)
         	minheight = height,
         	borderchars = borderchars,
 	})
-	for _, item in ipairs(db_results[2]) do
+	for _, item in ipairs(list_items) do
+		vim.api.nvim_echo({{item}},false,{})
 		-- Append to list of results
 		-- Open the popup and print the results
 	end
