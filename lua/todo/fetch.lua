@@ -43,7 +43,7 @@ local function list_results_popup(win_title, list_items)
         	borderchars = borderchars,
 	})
 	for _, item in ipairs(list_items) do
-		vim.api.nvim_echo({{item}},false,{})
+		vim.api.nvim_echo({{item[1] + item[2]}},false,{})
 		-- Append to list of results
 		-- Open the popup and print the results
 	end
