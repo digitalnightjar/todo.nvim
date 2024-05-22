@@ -6,7 +6,7 @@ end
 vim.g.loaded_todo_plugin = 1
 
 -- Define the path where LuaRocks dependencies will be cloned
-local lua_rocks_deps_loc = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":h:r") .. "/deps"
+local lua_rocks_deps_loc = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":h:r") .. "/deps/"
 -- Extend the Lua package path to include the LuaRocks dependencies
 package.path = package.path .. ";" .. lua_rocks_deps_loc .. "/lua-?/init.lua"
 
