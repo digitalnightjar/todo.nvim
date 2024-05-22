@@ -54,7 +54,7 @@ local function list_results_popup(win_title, list_items)
         "Normal:TodosBorder"
     )
 
-        vim.api.nvim_buf_set_lines(bufnr, 0, #db_results[2], false, db_results[2])
+        vim.api.nvim_buf_set_lines(bufnr, 0, #list_items[2], false, list_items[2])
 
     return {
         bufnr = bufnr,
