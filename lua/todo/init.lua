@@ -32,9 +32,9 @@ M.complete_todos = update.complete_todos
 -- Creates the commands that can bell from your remaps
 -- This is the lua equivelant of `command! -nargs=0 FetchTodos lua require("").fetch_todos()`
 local function setup_autocmds()
-	vim.api.nvim_create_user_command('FetchTodos', M.fetch_todos, { nargs='0' })
-	vim.api.nvim_create_user_command('InsertTodos', M.insert_todos, { nargs='0' })
-	vim.api.nvim_create_user_command('CompleteTodos', M.complete_todos, { nargs='0' })
+	vim.api.nvim_create_user_command('FetchTodos', M.fetch_todos, { nargs='?' })
+	vim.api.nvim_create_user_command('InsertTodos', M.insert_todos, { nargs='?' })
+	vim.api.nvim_create_user_command('CompleteTodos', M.complete_todos, { nargs='?' })
 end
 
 function M.setup()
